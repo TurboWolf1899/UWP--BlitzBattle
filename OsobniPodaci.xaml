@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UWP_Kviz.OsobniPodaci"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_Kviz"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/pozadina.png"/>
+        </Grid.Background>
+
+        <Button x:Name="Zaigraj" Content="ZAIGRAJ!" Margin="863,717,0,0" VerticalAlignment="Top" Height="102" Width="198" Click="Zaigraj_Click" FontSize="35" FontFamily="Verdana"/>
+        <TextBlock x:Name="OIB" HorizontalAlignment="Left" Margin="924,341,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Height="35" Width="83" FontSize="30" FontFamily="Verdana" RenderTransformOrigin="0.53,0.657"/>
+        <TextBox x:Name="OIBunos" HorizontalAlignment="Center" Margin="0,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="282" FontSize="30" FontFamily="Verdana"/>
+        <TextBlock x:Name="Ime" HorizontalAlignment="Left" Margin="927,464,0,0" TextWrapping="Wrap" Text="IME:" VerticalAlignment="Top" Height="33" Width="86" FontSize="30" FontFamily="Verdana"/>
+        <TextBox x:Name="Imeunos" HorizontalAlignment="Center" Margin="0,505,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="282" FontSize="30" FontFamily="Verdana"/>
+        <TextBlock x:Name="Prezime" HorizontalAlignment="Left" Margin="885,575,0,0" TextWrapping="Wrap" Text="PREZIME:" VerticalAlignment="Top" Height="31" Width="158" FontSize="30" FontFamily="Verdana"/>
+        <TextBox x:Name="Prezimeunos" HorizontalAlignment="Center" Margin="0,616,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="282" FontSize="30" FontFamily="Verdana" Height="49"/>
+        <TextBlock x:Name="ErrorTextbox" HorizontalAlignment="Left" Margin="738,862,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="129" Width="448" FontSize="30" FontFamily="Verdana"/>
+        <TextBlock HorizontalAlignment="Left" Margin="617,80,0,0" TextWrapping="Wrap" Text="PRIJE KVIZA... Molimo unesite Vaše podatke:" VerticalAlignment="Top" Height="70" Width="697" FontSize="30" FontFamily="Verdana"/>
+        <TextBlock x:Name="BrojIgraca" HorizontalAlignment="Left" Margin="883,205,0,0" TextWrapping="Wrap" Text="Prvi igrač:" VerticalAlignment="Top" Width="183" Height="75" FontSize="30" FontFamily="Verdana"/>
+    </Grid>
+</Page>

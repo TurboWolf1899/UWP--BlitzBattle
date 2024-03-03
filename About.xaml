@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UWP_Kviz.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_Kviz"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <MenuBar HorizontalAlignment="Left" Margin="0, 0, 0, 960">
+            <MenuBarItem Title="File">
+                <MenuFlyoutItem Text="Exit" Click="MenuFlyoutItem_Click"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Text="MainPage" Click="MenuFlyoutItem_Click_1"/>
+            </MenuBarItem>
+        </MenuBar>
+        <TextBlock HorizontalAlignment="Left" Margin="876,359,0,0" TextWrapping="Wrap" Text="Karlo Bilanović" VerticalAlignment="Top" Height="37" Width="176"/>
+        <TextBlock HorizontalAlignment="Left" Margin="887,407,0,0" TextWrapping="Wrap" Text="Matej Ćaćić" VerticalAlignment="Top" Width="175" Height="49"/>
+        <TextBlock HorizontalAlignment="Left" Margin="909,463,0,0" TextWrapping="Wrap" Text="3.G" VerticalAlignment="Top" Width="124" Height="38"/>
+        <TextBlock HorizontalAlignment="Left" Margin="511,178,0,0" TextWrapping="Wrap" Text="2 igrača. Svaki igrač ima 60 sekundi. Naizmjenično odgovaranje. Tko prvi ostane bez vremena gubi. Tko može brže i bolje odgovarati na pitanja i odnijeti pobjedu? " VerticalAlignment="Top" Height="43"/>
+        <TextBlock HorizontalAlignment="Left" Margin="895,302,0,0" TextWrapping="Wrap" Text="Napravili:" VerticalAlignment="Top" Width="156"/>
+
+    </Grid>
+</Page>

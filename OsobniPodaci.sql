@@ -1,0 +1,5 @@
+﻿CREATE TABLE OsobniPodaci(
+	OIB BIGINT NOT NULL,
+	Ime TEXT NOT NULL,
+	Prezime TEXT NOT NULL
+);

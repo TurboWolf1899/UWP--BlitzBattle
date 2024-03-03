@@ -24,6 +24,8 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <TextBlock x:Name="PogresniOdgovori" HorizontalAlignment="Left" Margin="875,904,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="49" Width="152"/>
+
+
         <TextBlock HorizontalAlignment="Left" Margin="21,137,0,0" TextWrapping="Wrap" Text="Prvi igrač:" VerticalAlignment="Top" Height="68" Width="183"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,199,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Height="36" Width="104" RenderTransformOrigin="0.423,0.694"/>
         <TextBlock x:Name="PrviIgracOIB" HorizontalAlignment="Left" Margin="120,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="25" Width="117"/>
@@ -46,10 +48,14 @@
         <TextBlock x:Name="PrviIgracVrijeme" HorizontalAlignment="Left" Margin="200,25,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="127" Height="50" FontSize="35"/>
         <TextBlock HorizontalAlignment="Left" Margin="1537,10,0,0" TextWrapping="Wrap" Text="Preostalo vrijeme:" VerticalAlignment="Top" Width="237" Height="83"/>
         <TextBlock x:Name="DrugiIgracVrijeme" HorizontalAlignment="Left" Margin="1713,25,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="119" Height="44" FontSize="35"/>
+
         <Button x:Name="optionBtn1" Content="Option 1" Margin="657,418,0,0" VerticalAlignment="Top" Height="62" Width="592" Click="OptionButton_Click"/>
         <Button x:Name="optionBtn2" Content="Option 2" Margin="657,0,0,0" Height="62" Width="592" Click="OptionButton_Click"/>
         <Button x:Name="optionBtn3" Content="Option 3" Margin="657,600,0,0" VerticalAlignment="Top" Height="62" Width="592" Click="OptionButton_Click"/>
         <Button x:Name="optionBtn4" Content="Option 4" Margin="657,688,0,0" VerticalAlignment="Top" Height="62" Width="592" Click="OptionButton_Click"/>
+
+        
+
 
     </Grid>
 </Page>

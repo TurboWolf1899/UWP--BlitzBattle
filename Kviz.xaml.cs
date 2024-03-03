@@ -5,6 +5,10 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Npgsql;
 
+
+
+
+
 namespace UWP_Kviz
 {
     public class Question
@@ -32,6 +36,7 @@ namespace UWP_Kviz
         {
             this.InitializeComponent();
             InitializeTimers();
+
             InitializeButtons();
             LoadQuestionsFromDatabase();
             ShuffleQuestions();
@@ -77,6 +82,7 @@ namespace UWP_Kviz
             }
         }
 
+
         private void InitializeTimers()
         {
             playerTimer = new DispatcherTimer();
@@ -115,6 +121,7 @@ namespace UWP_Kviz
             }
             else
             {
+
                 StopCurrentTimer();
                 if (isFirstPlayerTurn)
                 {
@@ -126,13 +133,15 @@ namespace UWP_Kviz
                 }
                 // Ako je isteklo vrijeme, promijeni igrača
                 ChangePlayerTurn();
+
             }
         }
 
         private void Započni_Click(object sender, RoutedEventArgs e)
         {
             Započni.Visibility = Visibility.Collapsed;
-            if (!gameStarted)
+
+            if (!gameStarted)           
             {
                 gameStarted = true;
                 StartCurrentTimer();
@@ -160,6 +169,7 @@ namespace UWP_Kviz
                 optionBtn3.Content = options[2];
                 optionBtn4.Content = options[3];
 
+
                 questionTextBlock.Visibility = Visibility.Visible;
                 optionBtn1.Visibility = Visibility.Visible;
                 optionBtn2.Visibility = Visibility.Visible;
@@ -167,6 +177,7 @@ namespace UWP_Kviz
                 optionBtn4.Visibility = Visibility.Visible;
 
                 ErrorText.Text = "";
+
 
                 // Nastavi timer od trenutne vrijednosti
                 StartCurrentTimer();
@@ -188,7 +199,9 @@ namespace UWP_Kviz
                 {
                     connection.Open();
 
+
                     string query = "SELECT * FROM pitanja";
+
 
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
@@ -206,12 +219,15 @@ namespace UWP_Kviz
                                     reader["wronganswer2"].ToString(),
                                     reader["wronganswer3"].ToString()
                                 };
+
                                 questions.Add(question);
                             }
+
                         }
                     }
                 }
             }
+
             catch (Exception ex)
             {
                 ErrorText.Text = ex.Message;
@@ -230,6 +246,8 @@ namespace UWP_Kviz
                 questionIndexes[k] = questionIndexes[n];
                 questionIndexes[n] = value;
             }
+
         }
     }
+
 }

@@ -6,22 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    FontFamily="Verdana"
-    FontSize="30"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <Grid>
-
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/pozadina.png"/>
-        </Grid.Background>
-        <Button x:Name="Započni" Content="ZAPOČNI!" Margin="854,89,0,0" VerticalAlignment="Top" Height="96" Width="198" Click="Započni_Click" FontFamily="Verdana" FontSize="35"/>
-        <TextBlock x:Name="questionTextBlock" HorizontalAlignment="Left" Margin="531,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="845" Height="176"  />
-        <RadioButton x:Name="optionRadioButton1" Content="" Margin="870,392,0,0" VerticalAlignment="Top" Width="204" />
-        <RadioButton x:Name="optionRadioButton2" Content="" Margin="870,443,0,0" VerticalAlignment="Top" Width="201" />
-        <RadioButton x:Name="optionRadioButton3" Content="" Margin="870,496,0,0" VerticalAlignment="Top" Width="201" />
-        <RadioButton x:Name="optionRadioButton4" Content="" Margin="870,551,0,0" VerticalAlignment="Top" Width="201" />
+        <Button x:Name="Započni" Content="ZAPOČNI!" Margin="854,89,0,0" VerticalAlignment="Top" Height="96" Width="198" Click="Započni_Click"/>
+        <TextBlock x:Name="questionTextBlock" HorizontalAlignment="Left" Margin="833,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239" Height="32" Visibility="Collapsed"/>
+        <RadioButton x:Name="optionRadioButton1" Content="" Margin="870,392,0,0" VerticalAlignment="Top" Width="204" Visibility="Collapsed"/>
+        <RadioButton x:Name="optionRadioButton2" Content="" Margin="870,443,0,0" VerticalAlignment="Top" Width="201" Visibility="Collapsed"/>
+        <RadioButton x:Name="optionRadioButton3" Content="" Margin="870,496,0,0" VerticalAlignment="Top" Width="201" Visibility="Collapsed"/>
+        <RadioButton x:Name="optionRadioButton4" Content="" Margin="870,551,0,0" VerticalAlignment="Top" Width="201" Visibility="Collapsed"/>
         <TextBlock x:Name="ErrorText" HorizontalAlignment="Left" Margin="245,896,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="35" UseLayoutRounding="False" Width="127" d:LayoutRounding="Auto" Visibility="Collapsed">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="0.89"/>
@@ -29,28 +22,28 @@
         </TextBlock>
         <TextBlock x:Name="PogresniOdgovori" HorizontalAlignment="Left" Margin="875,904,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="49" Width="152"/>
         <Button x:Name="Provjeri" Content="PROVJERI!" Margin="0,789,0,0" VerticalAlignment="Top" Height="47" Width="158" HorizontalAlignment="Center" Click="Provjeri_Click" Visibility="Collapsed"/>
-        <TextBlock HorizontalAlignment="Left" Margin="21,137,0,0" TextWrapping="Wrap" Text="Prvi igrač:" VerticalAlignment="Top" Height="68" Width="183"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,199,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Height="36" Width="104" RenderTransformOrigin="0.423,0.694"/>
-        <TextBlock x:Name="PrviIgracOIB" HorizontalAlignment="Left" Margin="120,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="25" Width="117"/>
-        <TextBlock HorizontalAlignment="Left" Margin="21,258,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Height="43" Width="85"/>
-        <TextBlock x:Name="PrviIgracIme" HorizontalAlignment="Left" Margin="120,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="106"/>
-        <TextBlock HorizontalAlignment="Left" Margin="21,312,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="161"/>
-        <TextBlock x:Name="PrviIgracPrezime" HorizontalAlignment="Left" Margin="190,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Height="30"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1524,137,0,0" TextWrapping="Wrap" Text="Drugi igrač:" VerticalAlignment="Top" Width="205" Height="42"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1525,199,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Width="92"/>
-        <TextBlock x:Name="DrugiIgracOIB" HorizontalAlignment="Left" Margin="1623,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124" Height="25"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1524,258,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Width="91"/>
-        <TextBlock x:Name="DrugiIgracIme" HorizontalAlignment="Left" Margin="1623,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109" Height="27"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1524,312,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.494,-0.056"/>
-        <TextBlock x:Name="DrugiIgracPrezime" HorizontalAlignment="Left" Margin="1703,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="113"/>
-        <TextBlock HorizontalAlignment="Left" Margin="21,454,0,0" TextWrapping="Wrap" Text="Broj točnih odgovora:" VerticalAlignment="Top" Height="81" Width="172"/>
-        <TextBlock x:Name="PrviIgracBodovi" HorizontalAlignment="Left" Margin="190,490,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="37" Width="104"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1531,454,0,0" TextWrapping="Wrap" Text="Broj točnih odgovora:" VerticalAlignment="Top" Height="81" Width="187"/>
-        <TextBlock x:Name="DrugiIgracBodovi" HorizontalAlignment="Left" Margin="1725,490,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="31" Width="110"/>
-        <TextBlock HorizontalAlignment="Left" Margin="16,10,0,0" TextWrapping="Wrap" Text="Preostalo vrijeme:" VerticalAlignment="Top" Width="226" Height="77"/>
-        <TextBlock x:Name="PrviIgracVrijeme" HorizontalAlignment="Left" Margin="200,25,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="127" Height="50" FontSize="35"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1537,10,0,0" TextWrapping="Wrap" Text="Preostalo vrijeme:" VerticalAlignment="Top" Width="237" Height="83"/>
-        <TextBlock x:Name="DrugiIgracVrijeme" HorizontalAlignment="Left" Margin="1713,25,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="119" Height="44" FontSize="35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,257,0,0" TextWrapping="Wrap" Text="Prvi igrač:" VerticalAlignment="Top" Height="36" Width="109"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,334,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Height="21" Width="67"/>
+        <TextBlock x:Name="PrviIgracOIB" HorizontalAlignment="Left" Margin="101,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="25" Width="117"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,384,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Height="27" Width="63"/>
+        <TextBlock x:Name="PrviIgracIme" HorizontalAlignment="Left" Margin="106,385,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,430,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="67"/>
+        <TextBlock x:Name="PrviIgracPrezime" HorizontalAlignment="Left" Margin="103,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Height="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1486,258,0,0" TextWrapping="Wrap" Text="Drugi igrač:" VerticalAlignment="Top" Width="102" Height="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1541,327,0,0" TextWrapping="Wrap" Text="OIB:" VerticalAlignment="Top" Width="46"/>
+        <TextBlock x:Name="DrugiIgracOIB" HorizontalAlignment="Left" Margin="1649,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124" Height="25"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1542,381,0,0" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Width="70"/>
+        <TextBlock x:Name="DrugiIgracIme" HorizontalAlignment="Left" Margin="1660,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109" Height="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1544,435,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="76"/>
+        <TextBlock x:Name="DrugiIgracPrezime" HorizontalAlignment="Left" Margin="1681,436,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="113"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,522,0,0" TextWrapping="Wrap" Text="Broj točnih odgovora:" VerticalAlignment="Top" Height="27" Width="158"/>
+        <TextBlock x:Name="PrviIgracBodovi" HorizontalAlignment="Left" Margin="68,572,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="37" Width="104"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1594,521,0,0" TextWrapping="Wrap" Text="Broj točnih odgovora:" VerticalAlignment="Top" Height="31" Width="170"/>
+        <TextBlock x:Name="DrugiIgracBodovi" HorizontalAlignment="Left" Margin="1604,574,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="31" Width="110"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,648,0,0" TextWrapping="Wrap" Text="Preostalo vrijeme:" VerticalAlignment="Top" Width="134" Height="27"/>
+        <TextBlock x:Name="PrviIgracVrijeme" HorizontalAlignment="Left" Margin="81,698,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="76" Height="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1576,648,0,0" TextWrapping="Wrap" Text="Preostalo vrijeme:" VerticalAlignment="Top" Width="129" Height="25"/>
+        <TextBlock x:Name="DrugiIgracVrijeme" HorizontalAlignment="Left" Margin="1613,699,0,0" TextWrapping="Wrap" Text="60s" VerticalAlignment="Top" Width="91" Height="28"/>
 
     </Grid>
 </Page>

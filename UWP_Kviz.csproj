@@ -132,6 +132,9 @@
     <Compile Include="OsobniPodaci.xaml.cs">
       <DependentUpon>OsobniPodaci.xaml</DependentUpon>
     </Compile>
+    <Compile Include=".xaml.cs">
+      <DependentUpon>.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +177,10 @@
     <Page Include="OsobniPodaci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include=".xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

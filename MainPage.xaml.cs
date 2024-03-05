@@ -42,5 +42,6 @@ namespace UWP_Kviz
         {
             Application.Current.Exit();
         }
+
     }
 }

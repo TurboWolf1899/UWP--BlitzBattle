@@ -5,7 +5,9 @@
     xmlns:local="using:UWP_Kviz"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Foreground="white"
     mc:Ignorable="d">
+
     <Page.Background>
         <ImageBrush/>
     </Page.Background>

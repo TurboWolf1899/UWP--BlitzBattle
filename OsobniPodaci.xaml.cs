@@ -104,7 +104,9 @@ namespace UWP_Kviz
             }
         }
 
-        private bool IsText(string input)
+      
+
+private bool IsText(string input)
         {
             foreach (char c in input)
             {

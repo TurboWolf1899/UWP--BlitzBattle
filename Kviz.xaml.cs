@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Npgsql;
+
+
 
 
 namespace UWP_Kviz
@@ -100,6 +102,7 @@ namespace UWP_Kviz
                 PogresniOdgovori.Text = "IGRAC DVA JE POBJEDIO!";
                 // Perform any actions you want when the timer reaches 0 for Player 1
                 // For example, end the game or switch to the other player's turn
+
             }
         }
         private void Player2Timer_Tick(object sender, object e)
@@ -121,6 +124,7 @@ namespace UWP_Kviz
                 // For example, end the game or switch to the other player's turn
             }
         }
+
         private void Započni_Click(object sender, RoutedEventArgs e)
         {
             if (gameStarted)
@@ -191,21 +195,23 @@ namespace UWP_Kviz
         // Method to fetch a random question from SQLite database
         private Question GetRandomQuestion()
         {
-            string connectionString = "Host=gejtejz-13872.8nj.gcp-europe-west1.cockroachlabs.cloud;Port=26257;Database=blitzbtl;Username=Mcacic;Password=NJhhoQj-IcRgyf1ffY60nQ;SSL Mode=Require;Trust Server Certificate=true";
+            string connectionString = @"Data Source=D:\Skola\Niop 3g\UWP_Kviz\UWP_Kviz\Databaza.db;Version=3";
 
             try
             {
-                using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
 
                     // Fetch all questions
+
                     string query = "SELECT * FROM pitanja";
                     List<Question> allQuestions = new List<Question>();
 
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+
                     {
-                        using (NpgsqlDataReader reader = command.ExecuteReader())
+                        using (SQLiteDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -260,6 +266,8 @@ namespace UWP_Kviz
         }
 
 
+
+
         // Method to get the current question
         private Question GetCurrentQuestion()
         {
@@ -268,7 +276,9 @@ namespace UWP_Kviz
 
         private void Provjeri_Click(object sender, RoutedEventArgs e)
         {
+
             ErrorText.Text = player1TimerDuration.ToString();
+
             if (player1TimerDuration == 0 || player2TimerDuration == 0)
             {
                 return;
@@ -378,6 +388,7 @@ namespace UWP_Kviz
 
 
 
+
         // Definicija funkcije FetchLastTwoRows
         private void FetchLastTwoRows()
         {
@@ -412,11 +423,14 @@ namespace UWP_Kviz
                                 {
                                     // Dohvaćanje vrijednosti iz svakog stupca u trenutnom retku
                                     
+
                                     long OIB = reader.GetInt64(1);
                                     string ime = reader.GetString(2);
                                     string prezime = reader.GetString(3);
 
+
                                     // Ažuriranje tekstualnih blokova s podacima iz baze
+
                                     if (rowCounter == 0)
                                     {
                                         DrugiIgracOIB.Text = $"{OIB}";
@@ -430,13 +444,17 @@ namespace UWP_Kviz
                                         PrviIgracPrezime.Text = $"{prezime}";
                                     }
 
+
                                     // Inkrementiranje brojača redova
+
                                     rowCounter++;
                                 }
                             }
                             else
                             {
+
                                 // Nema redova u rezultatu
+
                                 ErrorText.Text = "No rows returned by the query.";
                             }
                         }
@@ -445,6 +463,7 @@ namespace UWP_Kviz
             }
             catch (Exception ex)
             {
+
                 // Uhvatiti i prikazati bilo kakvu grešku koja se dogodi pri radu s bazom podataka
                 ErrorText.Text = "An error occurred: " + ex.Message;
             }
@@ -452,3 +471,4 @@ namespace UWP_Kviz
 
     }
 }
+
